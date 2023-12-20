@@ -34,6 +34,7 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		const products = getJson();
+		let file = req.file;
 		const {name,price,discount,category,description} = req.body;
 		const nuevaId = Date.now();
 		let ObjetoCreado = {
@@ -43,12 +44,10 @@ const controller = {
 			discount: +discount,
 			category,
 			description:description.trim(),
-			image: 'default-image.png'
+			image: file ? file.filename : 'default.jpg'
 		}
 		products.push(ObjetoCreado);
-		console.log(products);
 		const json = JSON.stringify(products);
-		console.log(json);
 		fs.writeFileSync(productsFilePath, json, 'utf-8');
 		res.redirect('/products')
 	},
