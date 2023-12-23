@@ -86,11 +86,23 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
+		const {id}= req.params;
 		const products = getJson();
+        
+		let product = products.find(product => product.id == id);
 		let productClear = products.filter(product => product.id !== +req.params.id);
 		const json = JSON.stringify(productClear);
+
+		fs.unlink(path.join(__dirname,`../../public/images/products/${product.image}`), (err) =>{
+			if(err) throw err;
+			console.log(`borre el archivo ${product.image}`);
+		})
+
+
 		fs.writeFileSync(productsFilePath,json, "utf-8");
 		res.redirect ('/products')
+
+
 	}
 };
 
