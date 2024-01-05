@@ -26,5 +26,26 @@
     "apellido": "kjhsakflhaslhf",
     "email": "sahnfjklsaf@jkahsfdkjashd",
     "contraseña": "kjashfdkljhalsf"
+  },
+  {
+    "id": 1704464069830,
+    "nombre": "Agustin",
+    "apellido": "Fernandez",
+    "email": "agus.fernandez@gmail.com",
+    "contraseña": "123456"
+  },
+  {
+    "id": 1704464516260,
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "email": "juan.perez@gmail.com",
+    "contraseña": "asdfghj"
+  },
+  {
+    "id": 1704476024032,
+    "nombre": "horacio",
+    "apellido": "",
+    "email": "agus.fernandez@gmail.com",
+    "contraseña": "dfas"
   }
 ]

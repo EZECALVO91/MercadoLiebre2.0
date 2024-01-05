@@ -31,6 +31,8 @@ const users = {
 		const json = JSON.stringify(users);
 		fs.writeFileSync(userFilePath, json, 'utf-8');
 		res.redirect('/')
+		console.log("req:",req.body);
+		
 
 
 	}
