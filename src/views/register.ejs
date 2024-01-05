@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario Registro'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <main>
+        <form  class="main_registro" accion="/register" method="post">
+                <section>
+                    <h4 class="h1_register">Datos Personales</h4>
+                    <article class="articulo_registro_main">
+                        <label for="nombre"></label>
+                        <input class="imput_register" type="text" name="nombre" id="nombre" placeholder="Ingresa nombre" required>
+                    </article>
+                    <article class="articulo_registro_main">
+                        <label for="apellido"></label>
+                        <input class="imput_register" type="text" name="apellido" id="usuario" placeholder="Ingresa tu apellido">
+                    </article>
+                    <article class="articulo_registro_main">
+                        <label for="email"></label>
+                        <input class="imput_register" type="email" name="email" id="email" placeholder="Ingresa tu email" required>
+                    </article>
+                </section>
+                <section>
+                    <article class="articulo_registro_main">
+                        <h4 class="h1_register">Seguridad</h4>
+                        <label for="contraseña"></label>
+                        <input class="imput_register" type="password" name="contraseña" id="contraseña" placeholder="Ingresa contraseña" required>
+                    </article>
+                </section>
+                    <article class="articulo_registro_main">
+                        <button class="btn_enviar_registro" type="submit">ENVIAR</button>
+                        <button type="reset" class="btn_reset_registro">BORRAR</button>
+                    </article>
+            </form>
+</main>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
