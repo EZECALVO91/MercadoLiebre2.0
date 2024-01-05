@@ -489,7 +489,7 @@ main{
   width: 20%;
   height: 40px;
   background-color: var(--light-blue);
-  color: var(--color-blanco);
+  color: white;
   border: 1px solid var(--light-blue);
   border-radius: 5px;
 }

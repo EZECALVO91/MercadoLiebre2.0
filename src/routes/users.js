@@ -7,6 +7,7 @@ const usersController =require('../controllers/usersController')
 
 /*** GET REGISTER ***/ 
 router.get('/register', usersController.register); 
+router.post('/register', usersController.userCreate)
 
 
 module.exports = router;

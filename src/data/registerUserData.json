@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1238193791837,
+    "nombre": "Horacio",
+    "apellido": "Yniguez",
+    "email": "horacio.23.@gmail.com",
+    "contraseña": 12345
+  },
+  {
+    "id": 1704420162634,
+    "nombre": "Calvo",
+    "apellido": "Ezequiel",
+    "email": "ezecalvo.ok@gmail.com",
+    "contraseña": "escorpio20"
+  },
+  {
+    "id": 1704420177349,
+    "nombre": "Calvo",
+    "apellido": "Ezequiel",
+    "email": "ezecalvo.ok@gmail.com",
+    "contraseña": "escorpio20"
+  },
+  {
+    "id": 1704420219180,
+    "nombre": "kjahbfkjlashgfljsaf",
+    "apellido": "kjhsakflhaslhf",
+    "email": "sahnfjklsaf@jkahsfdkjashd",
+    "contraseña": "kjashfdkljhalsf"
+  }
+]
