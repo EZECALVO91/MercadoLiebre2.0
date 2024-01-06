@@ -101,8 +101,12 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath,json, "utf-8");
 		res.redirect ('/products')
+	},
 
-
+	insale : (req, res)=>{
+			const products = getJson();
+			const inSale = products.filter(product => product.category == "in-sale");
+		res.render ('ofertas', {inSale, toThousand})
 	}
 };
 

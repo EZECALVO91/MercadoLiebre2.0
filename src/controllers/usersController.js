@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult} = require("express-validator");
+const { emitWarning } = require('process');
 
 const lecturaJson = () => {
     const userFilePath = path.join(__dirname, '../data/registerUserData.json');
@@ -11,12 +13,22 @@ const userFilePath = path.join(__dirname, '../data/registerUserData.json');
 
 
 const users = {
+    //Login
+	login: (req, res)=>{
+		res.render('login')
+	},
+
     // Register
 	register: (req, res) => {
 		res.render('register')
 	},
-
-	userCreate: (req, res ) => {
+	userCreate: (req, res, next ) => {
+		
+        const error = validationResult(req);
+		if( !error.isEmpty()){
+			res.render("register", {error : error.mapped(), old:req.body})
+			// res.send (error.mapped())
+		}
 		const users = lecturaJson();
 		const {nombre,apellido,email,contraseña} = req.body;
 		const nuevaId = Date.now();
@@ -31,10 +43,6 @@ const users = {
 		const json = JSON.stringify(users);
 		fs.writeFileSync(userFilePath, json, 'utf-8');
 		res.redirect('/')
-		console.log("req:",req.body);
-		
-
-
 	}
 
 

@@ -518,3 +518,56 @@ main{
       height: 35px;
   }
 }
+
+/* TODO LO QUE ES LOGIN */
+
+.main_login{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+.articulo_login_main{
+  padding: 18px;
+}
+
+.input_login{
+  border: 1px solid gray;
+  width: 95%;
+  height: 30px;
+  border-radius: 5px;
+}
+.btn_login_main{
+  width: 60%;
+  height: 30px;
+  background-color: var(--light-blue);
+  color: white;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  transition: background-color 2seg;
+}
+.footer_login_move{
+  position: relative;
+  bottom: 0;
+}
+@media(min-width: 768px){
+  .input_login{
+      width: 60%;
+      height: 35px;
+  }
+  .articulo_login_main{
+      padding: 13px;
+  }
+  .btn_login_main:hover{
+      background-color: var(--light-blue);
+  }
+}
+
+@media  (min-width: 1024px){
+  .input_login{
+      height: 35px;
+  }
+  .main_login{
+      margin-bottom: 200px;
+  }
+}
