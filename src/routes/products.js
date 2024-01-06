@@ -38,5 +38,8 @@ router.put('/edit/:id', productsController.update);
 router.delete('/delete/:id', productsController.destroy); 
 
 
+/* INSALE ON PRODUCTS */
+router.get('/insale', productsController.insale)
+
 
 module.exports = router;

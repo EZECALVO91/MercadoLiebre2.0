@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Formulario Registro'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+    <main class="main_login">
+        <form action="/login" method="post">
+            <section>
+                <article class="articulo_login_main">
+                    <label for="usuario"></label>
+                    <input class="input_login" type="text" placeholder="Nombre de usuario" required>
+                </article>
+                <article class="articulo_login_main">
+                    <button class="btn_login_main" type="submit">LOGUEAR</button>
+                </article>
+            </section>
+        </form>
+    </main>
+<!-- footer -->
+<%- include('partials/footer') %>
+<!-- /footer -->
+</body>	
+</html>
