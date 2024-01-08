@@ -468,6 +468,9 @@ textarea.form-input {
 main{
   padding: 10px;
 }
+.color_error{
+  color: red;
+}
 .main_registro{
   display: flex;
   flex-direction: column;

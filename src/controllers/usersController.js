@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require("express-validator");
-const { emitWarning } = require('process');
 
 const lecturaJson = () => {
     const userFilePath = path.join(__dirname, '../data/registerUserData.json');
